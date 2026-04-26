@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<meta name="theme-color" content="#0088ff">
+<title>🌟 ENGLISH PRO X ULTIMATE 🌟 Ingliz Tilini Mukammal O'rganish</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #0d1b2a;
+  --bg-card: rgba(5, 10, 25, 0.85);
+  --bg-surface: #1a2a4a;
+  --bg-surface2: #1e3a5f;
+  --text-primary: #ffffff;
+  --text-secondary: #b0d4ff;
+  --text-muted: rgba(255,255,255,0.6);
+  --border-color: rgba(0, 136, 255, 0.3);
+  --primary: #0088ff;
+  --secondary: #00ccff;
+  --success: #00b09b;
+  --danger: #ff4444;
+  --gradient: linear-gradient(135deg, #0088ff, #00ccff, #ff69b4);
+  --gradient-gold: linear-gradient(135deg, #ffd700, #ff8c00);
+  --shadow: 0 8px 32px rgba(0,0,0,0.3);
+  --shadow-hover: 0 15px 45px rgba(0,136,255,0.5);
+  --glow: 0 0 25px rgba(0,136,255,0.6);
+}
+
+body.light {
+  --bg-primary: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-surface: #f8fafc;
+  --bg-surface2: #e2e8f0;
+  --text-primary: #1e293b;
+  --text-secondary: #2563eb;
+  --text-muted: rgba(0,0,0,0.5);
+  --border-color: rgba(0, 136, 255, 0.2);
+}
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+.container { max-width: 1440px; margin: 0 auto; padding: 0 24px; }
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #1a2a4a 100%);
+  transition: background 0.3s;
+}
+.bg::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 40%, rgba(0,136,255,0.2) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(255,105,180,0.15) 0%, transparent 50%);
+  animation: floatBg 12s ease-in-out infinite;
+}
+@keyframes floatBg {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+.particle {
+  position: absolute;
+  background: var(--primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: particleFloat 20s infinite linear;
+}
+@keyframes particleFloat {
+  from { transform: translateY(100vh) rotate(0deg); }
+  to { transform: translateY(-100vh) rotate(360deg); }
+}
+
+.logo-section {
+  text-align: center;
+  padding: 20px 0 15px;
+  background: var(--bg-secondary);
+  border-bottom: 3px solid transparent;
+  border-image: var(--gradient);
+  border-image-slice: 1;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+.logo-wrapper {
+  display: inline-block;
+  animation: logoGlow 3s ease-in-out infinite;
+}
+@keyframes logoGlow {
+  0%, 100% { filter: drop-shadow(0 0 5px var(--primary)); }
+  50% { filter: drop-shadow(0 0 20px var(--primary)); }
+}
+.logo-icon { display: inline-block; animation: bounce 2s ease-in-out infinite; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.logobrend {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: inline-block;
+  
+}
+.logo-text {
+  font-size: 38px;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-left: 15px;
+}
+.logo-badge {
+  font-size: 12px;
+  background: var(--gradient-gold);
+  padding: 4px 12px;
+  border-radius: 30px;
+  color: #1a1a2e;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.logo-desc { font-size: 13px; margin-top: 8px; color: var(--text-muted); }
+
+.topbar-controls {
+  display: flex;
+  justify-content: center;
+  padding: 12px 24px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+.theme-btn {
+  background: var(--gradient);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 60px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s;
+  box-shadow: var(--glow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.theme-btn:hover { transform: scale(1.05); box-shadow: var(--shadow-hover); }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 115px;
+  z-index: 99;
+  background: var(--bg-secondary);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+}
+.menu button {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 60px;
+  background: var(--gradient);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.menu button:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+
+section { display: none; animation: fadeInUp 0.5s ease; padding: 20px; }
+.active-section { display: block; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  margin: 15px 0;
+  padding: 30px;
+  border-radius: 32px;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+h2 {
+  margin-bottom: 25px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin: 35px 0;
+}
+.stat-card {
+  background: rgba(0,136,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 28px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card:hover { transform: translateY(-5px); background: rgba(0,136,255,0.25); box-shadow: var(--glow); }
+.stat-number {
+  font-size: 42px;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat-label { margin-top: 10px; font-size: 14px; color: var(--text-secondary); display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+.level-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  justify-content: center;
+}
+.level-btn {
+  padding: 10px 24px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+.level-btn.active { background: var(--primary); color: white; transform: scale(1.05); box-shadow: var(--glow); }
+.level-btn.A1 { background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; }
+.level-btn.A2 { background: linear-gradient(135deg, #27ae60, #1e8449); color: white; }
+.level-btn.B1 { background: linear-gradient(135deg, #f39c12, #e67e22); color: white; }
+.level-btn.B2 { background: linear-gradient(135deg, #e67e22, #d35400); color: white; }
+.level-btn.C1 { background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; }
+
+.question-card {
+  background: var(--bg-surface);
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 28px;
+  border-left: 6px solid var(--primary);
+}
+.question-text { font-size: 20px; font-weight: 600; margin-bottom: 20px; }
+
+.options { display: flex; flex-direction: column; gap: 15px; }
+.option-btn {
+  background: var(--bg-surface2);
+  padding: 16px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all 0.3s;
+}
+.option-btn:hover { background: var(--primary); transform: translateX(8px); }
+.option-btn.selected { background: var(--success); border-color: white; }
+.option-prefix {
+  background: var(--gradient);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.start-btn, .mic-btn, .action-btn, .danger-btn {
+  padding: 14px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 60px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.start-btn { background: linear-gradient(135deg, #00b09b, #96c93d); }
+.mic-btn { background: var(--gradient); }
+.action-btn { background: linear-gradient(135deg, #00ccff, #0088ff); }
+.danger-btn { background: linear-gradient(135deg, #ff4444, #cc0000); }
+
+.feedback {
+  padding: 18px;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  animation: slideIn 0.3s ease;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.feedback.correct { background: rgba(0,176,155,0.2); border-left: 5px solid var(--success); }
+.feedback.incorrect { background: rgba(0,136,255,0.2); border-left: 5px solid var(--primary); }
+
+.record-status {
+  padding: 15px;
+  border-radius: 20px;
+  margin: 15px 0;
+  text-align: center;
+  background: rgba(0,136,255,0.15);
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.setting-group {
+  margin: 30px 0;
+  padding: 25px;
+  background: var(--bg-surface);
+  border-radius: 25px;
+  border: 1px solid var(--border-color);
+}
+.setting-group h3 {
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.setting-input, select.setting-input, textarea.setting-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface2);
+  color: var(--text-primary);
+  margin: 10px 0;
+  font-size: 14px;
+}
+.setting-input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,136,255,0.2); }
+
+.custom-item {
+  background: var(--bg-surface2);
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-left: 4px solid var(--primary);
+}
+.custom-item span { flex: 1; font-size: 13px; }
+.item-buttons { display: flex; gap: 10px; }
+.item-btn { padding: 6px 15px; border-radius: 30px; border: none; color: white; cursor: pointer; font-size: 12px; }
+.play-btn { background: var(--primary); }
+.delete-btn { background: var(--danger); }
+
+.tense-item {
+  background: var(--bg-surface);
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 25px;
+  border-left: 6px solid var(--primary);
+}
+.tense-name { font-size: 20px; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tense-uzname { font-size: 14px; color: var(--secondary); margin-bottom: 15px; }
+.tense-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin: 15px 0; }
+.tense-box { background: var(--bg-surface2); padding: 15px; border-radius: 20px; font-size: 13px; }
+.tense-box strong { color: var(--secondary); display: block; margin-bottom: 10px; }
+
+.writing-input, .listening-answer {
+  width: 100%;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface2);
+  color: var(--text-primary);
+  margin: 15px 0;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.progress {
+  background: var(--bg-surface2);
+  border-radius: 50px;
+  height: 12px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+.progress-bar {
+  background: var(--gradient);
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+  border-radius: 50px;
+}
+
+.result-box {
+  background: var(--bg-surface);
+  padding: 40px;
+  border-radius: 32px;
+  text-align: center;
+  margin-top: 25px;
+  animation: zoomIn 0.4s ease;
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.result-score { font-size: 64px; font-weight: 800; background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+.search-box input {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 15px;
+  border-radius: 60px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface2);
+  color: var(--text-primary);
+}
+.result-item {
+  padding: 15px 20px;
+  margin-top: 12px;
+  background: var(--bg-surface);
+  border-radius: 20px;
+  cursor: pointer;
+  border-left: 4px solid var(--primary);
+}
+.result-item:hover { transform: translateX(10px); background: var(--gradient); color: white; }
+
+.toast {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: var(--gradient);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 60px;
+  z-index: 2000;
+  animation: slideInRight 0.3s ease;
+  box-shadow: var(--shadow);
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(120px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.checkbox-group { display: flex; align-items: center; gap: 12px; margin: 12px 0; flex-wrap: wrap; }
+.checkbox-group input { width: 18px; height: 18px; cursor: pointer; accent-color: var(--primary); }
+
+@media (max-width: 768px) {
+  .menu button { padding: 8px 14px; font-size: 11px; }
+  .card { padding: 18px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .logobrend { width: 50px; height: 50px; }
+  .logo-text { font-size: 22px; }
+  .tense-info { grid-template-columns: 1fr; }
+  .start-btn, .mic-btn, .action-btn, .danger-btn { width: 100%; justify-content: center; }
+  .custom-item { flex-direction: column; text-align: center; }
+  .question-text { font-size: 18px; }
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-surface2); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: var(--gradient); border-radius: 10px; }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="particles" id="particles"></div>
+
+<div class="logo-section">
+  <div class="logo-wrapper">
+    <div class="logo-icon">
+      <img class="logobrend" src="logo.png" alt="Logo">
+    </div>
+    <span class="logo-text">ENGLISH PRO X</span>
+    <span class="logo-badge">ULTIMATE v14.0</span>
+  </div>
+  <div class="logo-desc">🚀 Ingliz tilini A1 dan C1 gacha mukammal o'rganing | 27 zamon | Random savollar</div>
+</div>
+
+<div class="topbar-controls">
+  <button class="theme-btn" id="themeToggleBtn"><i class="fas fa-moon"></i> Qorong'u rejim</button>
+</div>
+
+<nav class="menu">
+  <button onclick="showSection('menu')"><i class="fas fa-home"></i> Bosh</button>
+  <button onclick="showSection('dictionary')"><i class="fas fa-book"></i> Lug'at</button>
+  <button onclick="showSection('tenses')"><i class="fas fa-clock"></i> Zamonlar</button>
+  <button onclick="showSection('grammar')"><i class="fas fa-graduation-cap"></i> Qoidalar</button>
+  <button onclick="showSection('test')"><i class="fas fa-pen"></i> Test</button>
+  <button onclick="showSection('writing')"><i class="fas fa-keyboard"></i> Yozish</button>
+  <button onclick="showSection('listening')"><i class="fas fa-headphones"></i> Tinglash</button>
+  <button onclick="showSection('speaking')"><i class="fas fa-microphone"></i> Gapirish</button>
+  <button onclick="showSection('progress')"><i class="fas fa-chart-line"></i> Statistika</button>
+  <button onclick="showSection('settings')"><i class="fas fa-cogs"></i> Sozlamalar</button>
+</nav>
+
+<main class="container">
+
+<section id="menu" class="active-section">
+  <div class="card" style="text-align: center;">
+    <h1 style="background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 42px;">🎓 Xush kelibsiz!</h1>
+    <p style="margin: 20px 0; font-size: 18px;">Ingliz tilini o'rganishning eng zamonaviy platformasi</p>
+    <div class="stats-grid">
+      <div class="stat-card" onclick="showSection('dictionary')"><div class="stat-number" id="wordCount">0</div><div class="stat-label"><i class="fas fa-book"></i> So'zlar</div></div>
+      <div class="stat-card" onclick="showSection('tenses')"><div class="stat-number">27</div><div class="stat-label"><i class="fas fa-clock"></i> Zamonlar</div></div>
+      <div class="stat-card" onclick="showSection('grammar')"><div class="stat-number" id="ruleCount">0</div><div class="stat-label"><i class="fas fa-graduation-cap"></i> Qoidalar</div></div>
+      <div class="stat-card" onclick="showSection('test')"><div class="stat-number" id="testTotal">0</div><div class="stat-label"><i class="fas fa-pen"></i> Testlar</div></div>
+      <div class="stat-card" onclick="showSection('progress')"><div class="stat-number" id="totalScore">0</div><div class="stat-label"><i class="fas fa-trophy"></i> Ball</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="dictionary" class="card">
+  <h2><i class="fas fa-book"></i> Lug'at</h2>
+  <div class="search-box"><input id="searchInput" placeholder="🔎 O'zbekcha yoki Inglizcha so'z yozing..."></div>
+  <div id="results"></div>
+</section>
+
+<section id="tenses" class="card">
+  <h2><i class="fas fa-clock"></i> 27 ta Ingliz Tili Zamonlari</h2>
+  <div id="tensesList"></div>
+</section>
+
+<section id="grammar" class="card">
+  <h2><i class="fas fa-graduation-cap"></i> Grammatik qoidalar</h2>
+  <div class="level-buttons" id="grammarLevelButtons">
+    <button class="level-btn A1" data-level="A1">A1</button>
+    <button class="level-btn A2" data-level="A2">A2</button>
+    <button class="level-btn B1" data-level="B1">B1</button>
+    <button class="level-btn B2" data-level="B2">B2</button>
+    <button class="level-btn C1" data-level="C1">C1</button>
+  </div>
+  <div id="grammarList"></div>
+</section>
+
+<!-- TEST - RANDOM SAVOLLAR (DARAJALAR ISHLAYDI) -->
+<section id="test" class="card">
+  <h2><i class="fas fa-pen"></i> Test (Random savollar)</h2>
+  <div class="level-buttons" id="testLevelButtons">
+    <button class="level-btn A1" data-level="A1">A1</button>
+    <button class="level-btn A2" data-level="A2">A2</button>
+    <button class="level-btn B1" data-level="B1">B1</button>
+    <button class="level-btn B2" data-level="B2">B2</button>
+    <button class="level-btn C1" data-level="C1">C1</button>
+  </div>
+  <div id="testArea"><button id="startTestBtn" class="start-btn"><i class="fas fa-random"></i> Random Testni Boshlash</button></div>
+</section>
+
+<section id="writing" class="card">
+  <h2><i class="fas fa-keyboard"></i> Yozish mashqi (Random mavzu)</h2>
+  <div class="level-buttons" id="writingLevelButtons">
+    <button class="level-btn A1" data-level="A1">A1</button>
+    <button class="level-btn A2" data-level="A2">A2</button>
+    <button class="level-btn B1" data-level="B1">B1</button>
+    <button class="level-btn B2" data-level="B2">B2</button>
+    <button class="level-btn C1" data-level="C1">C1</button>
+  </div>
+  <div class="question-card"><div class="question-text" id="topicText">Yuklanmoqda...</div></div>
+  <textarea id="writingInput" class="writing-input" rows="6" placeholder="Ingliz tilida javobingizni yozing..."></textarea>
+  <button id="checkWritingBtn" class="start-btn"><i class="fas fa-check"></i> Tekshirish</button>
+  <button id="nextWritingBtn" class="mic-btn"><i class="fas fa-random"></i> Random mavzu</button>
+  <div id="writingFeedback"></div>
+</section>
+
+<section id="listening" class="card">
+  <h2><i class="fas fa-headphones"></i> Tinglash mashqi (Random ibora)</h2>
+  <div class="level-buttons" id="listeningLevelButtons">
+    <button class="level-btn A1" data-level="A1">A1</button>
+    <button class="level-btn A2" data-level="A2">A2</button>
+    <button class="level-btn B1" data-level="B1">B1</button>
+    <button class="level-btn B2" data-level="B2">B2</button>
+    <button class="level-btn C1" data-level="C1">C1</button>
+  </div>
+  <div class="question-card">
+    <div class="question-text" id="listenPhrase">Darajani tanlang</div>
+    <button id="playAudioBtn" class="mic-btn"><i class="fas fa-volume-up"></i> Audioni tinglash</button>
+    <input type="text" id="listeningAnswer" class="listening-answer" placeholder="Eshitganingizni yozing...">
+    <button id="checkListeningBtn" class="start-btn"><i class="fas fa-check"></i> Tekshirish</button>
+    <button id="nextListeningBtn" class="mic-btn"><i class="fas fa-random"></i> Random ibora</button>
+    <div id="listeningFeedback"></div>
+  </div>
+</section>
+
+<section id="speaking" class="card">
+  <h2><i class="fas fa-microphone"></i> Gapirish mashqi (Random ibora)</h2>
+  <div class="level-buttons" id="speakingLevelButtons">
+    <button class="level-btn A1" data-level="A1">A1</button>
+    <button class="level-btn A2" data-level="A2">A2</button>
+    <button class="level-btn B1" data-level="B1">B1</button>
+    <button class="level-btn B2" data-level="B2">B2</button>
+    <button class="level-btn C1" data-level="C1">C1</button>
+  </div>
+  <div class="question-card">
+    <div class="question-text" id="speakPhrase">Darajani tanlang</div>
+    <button id="speakExampleBtn" class="mic-btn"><i class="fas fa-play"></i> Misol talaffuz</button>
+    <button id="startRecordBtn" class="mic-btn"><i class="fas fa-microphone-alt"></i> Gapirishni boshlash</button>
+    <button id="nextSpeakBtn" class="action-btn"><i class="fas fa-random"></i> Random ibora</button>
+    <div id="recordStatus" class="record-status"></div>
+    <div id="speakingFeedback"></div>
+  </div>
+</section>
+
+<section id="progress" class="card">
+  <h2><i class="fas fa-chart-line"></i> Statistika</h2>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-number" id="progressTest">0</div><div class="stat-label">✅ Testlar</div></div>
+    <div class="stat-card"><div class="stat-number" id="progressWriting">0</div><div class="stat-label">✍️ Yozish</div></div>
+    <div class="stat-card"><div class="stat-number" id="progressListening">0</div><div class="stat-label">🎧 Tinglash</div></div>
+    <div class="stat-card"><div class="stat-number" id="progressSpeaking">0</div><div class="stat-label">🎙️ Gapirish</div></div>
+  </div>
+  <div class="progress"><div class="progress-bar" id="overallProgress"></div></div>
+  <p style="text-align: center; margin: 15px 0;"><strong id="progressPercent">0</strong>% Umumiy progress</p>
+  <button id="clearStatsBtn" class="danger-btn"><i class="fas fa-trash"></i> Statistikani tozalash</button>
+</section>
+
+<!-- SOZLAMALAR - TEST QO'SHISH HAM SHU YERDA -->
+<section id="settings" class="card">
+  <h2><i class="fas fa-cogs"></i> Sozlamalar</h2>
+  
+  <div class="setting-group">
+    <h3><i class="fas fa-palette"></i> Ko'rinish</h3>
+    <div class="checkbox-group"><input type="checkbox" id="autoSpeak" checked><label>🔊 Avtomatik o'qish</label></div>
+    <div class="checkbox-group"><input type="checkbox" id="showTranslation" checked><label>📖 Tarjimani ko'rsatish</label></div>
+    <div><label>📏 Matn o'lchami:</label><input type="range" id="fontSizeControl" min="70" max="130" value="100"><span id="fontSizeValue">100%</span></div>
+    <select id="voiceLang" class="setting-input"><option value="en-US">🇺🇸 AQSH inglizchasi</option></select>
+    <input type="file" id="bgInput" accept="image/*" class="setting-input">
+    <button id="resetBgBtn" class="start-btn"><i class="fas fa-undo"></i> Fonni tiklash</button>
+  </div>
+
+  <!-- YANGI TEST QO'SHISH (SOZLAMALARDA) -->
+  <div class="setting-group">
+    <h3><i class="fas fa-plus-circle"></i> Yangi test qo'shish</h3>
+    <select id="newTestLevel" style="width:25%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+      <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+      <option value="B2">B2</option><option value="C1">C1</option>
+    </select>
+    <input type="text" id="newTestQuestion" placeholder="Savol matni (ingliz tilida)" style="width:70%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <div style="display:flex; gap:10px; margin-top:10px;">
+      <input type="text" id="newTestOpt1" placeholder="A variant" style="width:23%; padding:10px; border-radius:16px; background:var(--bg-surface2);">
+      <input type="text" id="newTestOpt2" placeholder="B variant" style="width:23%; padding:10px; border-radius:16px; background:var(--bg-surface2);">
+      <input type="text" id="newTestOpt3" placeholder="C variant" style="width:23%; padding:10px; border-radius:16px; background:var(--bg-surface2);">
+      <input type="text" id="newTestOpt4" placeholder="D variant" style="width:23%; padding:10px; border-radius:16px; background:var(--bg-surface2);">
+    </div>
+    <input type="text" id="newTestCorrect" placeholder="To'g'ri javob (variant matni)" style="width:100%; padding:12px; border-radius:16px; background:var(--bg-surface2); margin-top:10px;">
+    <button id="addTestBtn" class="action-btn" style="margin-top:10px;"><i class="fas fa-plus"></i> Test qo'shish</button>
+    <div id="customTestList" style="margin-top:15px;"></div>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-plus-circle"></i> Yangi mavzu qo'shish (Yozish)</h3>
+    <select id="newTopicLevel" style="width:25%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+      <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+      <option value="B2">B2</option><option value="C1">C1</option>
+    </select>
+    <input type="text" id="newTopicText" placeholder="Yangi mavzu (ingliz tilida)" style="width:70%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <button id="addTopicBtn" class="action-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+    <div id="customTopicsList"></div>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-music"></i> Yangi audio qo'shish (Tinglash)</h3>
+    <select id="newAudioLevel" style="width:20%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+      <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+      <option value="B2">B2</option><option value="C1">C1</option>
+    </select>
+    <input type="text" id="newAudioName" placeholder="Audio nomi" style="width:35%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <input type="text" id="newAudioText" placeholder="Matni (ingliz tilida)" style="width:40%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <input type="file" id="newAudioFile" accept="audio/*" style="margin-top:12px; width:100%; padding:12px; background:var(--bg-surface2); border-radius:16px;">
+    <button id="addAudioBtn" class="action-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+    <div id="customAudioList"></div>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-microphone"></i> Yangi ibora qo'shish (Gapirish)</h3>
+    <select id="newSpeakLevel" style="width:25%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+      <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+      <option value="B2">B2</option><option value="C1">C1</option>
+    </select>
+    <input type="text" id="newSpeakText" placeholder="Yangi ibora (ingliz tilida)" style="width:70%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <button id="addSpeakBtn" class="action-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+    <div id="customSpeakList"></div>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-graduation-cap"></i> Yangi qoida qo'shish</h3>
+    <select id="newRuleLevel" style="width:20%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+      <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+      <option value="B2">B2</option><option value="C1">C1</option>
+    </select>
+    <input type="text" id="newRuleTitle" placeholder="Qoida nomi" style="width:75%; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <textarea id="newRuleContent" rows="3" placeholder="Qoida matni" style="width:100%; padding:12px; border-radius:16px; background:var(--bg-surface2);"></textarea>
+    <button id="addRuleBtn" class="action-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+    <div id="customRuleList"></div>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-spell-check"></i> Yangi so'z qo'shish</h3>
+    <input type="text" id="newWordUz" placeholder="O'zbekcha so'z" style="width:48%; display:inline-block; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <input type="text" id="newWordEn" placeholder="Inglizcha so'z" style="width:48%; display:inline-block; padding:12px; border-radius:16px; background:var(--bg-surface2);">
+    <button id="addWordBtn" class="start-btn"><i class="fas fa-plus"></i> Qo'shish</button>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-database"></i> Xotira va Kesh</h3>
+    <p>Saqlangan ma'lumotlar: <strong id="storageSize">0</strong> KB</p>
+    <button id="clearCacheBtn" class="action-btn"><i class="fas fa-broom"></i> Keshtozalash</button>
+    <button id="clearStorageBtn" class="danger-btn"><i class="fas fa-trash-alt"></i> Barcha ma'lumotlarni o'chirish</button>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-arrow-alt-circle-right"></i> Boshqa</h3>
+    <button id="fullscreenBtn" class="action-btn"><i class="fas fa-expand"></i> To'liq ekran</button>
+    <button id="exportDataBtn" class="action-btn"><i class="fas fa-download"></i> Eksport</button>
+    <button id="importDataBtn" class="action-btn"><i class="fas fa-upload"></i> Import</button>
+    <button id="resetAllBtn" class="danger-btn"><i class="fas fa-sync-alt"></i> Hammasini tiklash</button>
+  </div>
+
+  <div class="setting-group">
+    <h3><i class="fas fa-info-circle"></i> Dastur haqida</h3>
+    <p><strong>ASOSCHI: PARDAYEV AKMAL</strong></p>
+    <p><strong>✨ English Pro X Ultimate v14.0</strong></p>
+    <p><i class="fas fa-check-circle"></i> Random savollar tizimi</p>
+    <p><i class="fas fa-check-circle"></i> 27 ta to'liq zamonlar</p>
+    <p><i class="fas fa-check-circle"></i> A1, A2, B1, B2, C1 darajalari</p>
+    <p><i class="fas fa-check-circle"></i> O'zingiz mavzu, audio, ibora, qoida, so'z, TEST qo'shish</p>
+    <p><i class="fas fa-check-circle"></i> AI yordamchi ovoz tahlili</p>
+    <p><i class="fas fa-check-circle"></i> To'liq statistika va progress</p>
+    <p style="margin-top: 15px;"><i class="fas fa-microphone"></i> Chrome da eng yaxshi ishlaydi</p>
+  </div>
+</section>
+
+</main>
+
+<script>
+// PARTICLES
+function createParticles() {
+  const container = document.getElementById('particles');
+  for (let i = 0; i < 40; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    const size = Math.random() * 3 + 1;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 20 + 's';
+    particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+    particle.style.opacity = Math.random() * 0.3;
+    container.appendChild(particle);
+  }
+}
+createParticles();
+
+// O'ZGARUVCHILAR
+let autoSpeak = true, showTranslation = true, voiceLang = 'en-US', fontSize = 100;
+let stats = JSON.parse(localStorage.getItem('englishProStats')) || { testsCompleted:0, writingCompleted:0, listeningCompleted:0, speakingCompleted:0, totalScore:0 };
+
+let words = [
+  { uz: "salom", en: "hello" }, { uz: "kitob", en: "book" }, { uz: "maktab", en: "school" },
+  { uz: "yaxshi", en: "good" }, { uz: "yomon", en: "bad" }, { uz: "katta", en: "big" },
+  { uz: "kichik", en: "small" }, { uz: "chiroyli", en: "beautiful" }, { uz: "tez", en: "fast" }
+];
+
+// 27 ZAMON
+const tenseNames = ["Present Simple", "Present Continuous", "Present Perfect", "Present Perfect Continuous", "Past Simple", "Past Continuous", "Past Perfect", "Past Perfect Continuous", "Future Simple", "Future Continuous", "Future Perfect", "Future Perfect Continuous", "Present Simple Passive", "Past Simple Passive", "Future Simple Passive", "Present Perfect Passive", "Can", "Could", "Must", "May", "Might", "Should", "Would", "Going to", "Used to", "Be used to", "Get used to"];
+const tenseUzNames = ["Oddiy Hozirgi", "Davomli Hozirgi", "Tugallangan Hozirgi", "Tugallangan Davomli Hozirgi", "Oddiy O'tgan", "Davomli O'tgan", "Tugallangan O'tgan", "Tugallangan Davomli O'tgan", "Oddiy Kelasi", "Davomli Kelasi", "Tugallangan Kelasi", "Tugallangan Davomli Kelasi", "Majhul Hozirgi", "Majhul O'tgan", "Majhul Kelasi", "Majhul Tugallangan", "Qobiliyat", "O'tgan Qobiliyat", "Majburiyat", "Ehtimollik", "Kuchsiz Ehtimollik", "Maslahat", "Xohish", "Reja", "O'tmish Odat", "Odatlanganlik", "Odatlanish"];
+const tenseFormulas = ["V1/V1+s/es", "am/is/are+Ving", "have/has+V3", "have/has+been+Ving", "V2/V+ed", "was/were+Ving", "had+V3", "had+been+Ving", "will+V1", "will+be+Ving", "will+have+V3", "will+have+been+Ving", "am/is/are+V3", "was/were+V3", "will+be+V3", "have/has+been+V3", "can+V1", "could+V1", "must+V1", "may+V1", "might+V1", "should+V1", "would+V1", "going to+V1", "used to+V1", "be used to+Ving", "get used to+Ving"];
+const tenseExamples = ["I play football.", "I am playing now.", "I have played.", "I have been playing.", "I played yesterday.", "I was playing.", "I had played.", "I had been playing.", "I will play.", "I will be playing.", "I will have played.", "I will have been playing.", "The book is read.", "The book was read.", "The book will be read.", "The book has been read.", "I can play.", "I could play.", "You must study.", "I may come.", "It might rain.", "You should go.", "I would like.", "I am going to travel.", "I used to smoke.", "I am used to waking.", "I am getting used to it."];
+const tenses = Array(27).fill().map((_,i) => ({ id: i+1, name: tenseNames[i], uzName: tenseUzNames[i], formula: tenseFormulas[i], usage: "Harakatning vaqtini va turini ifodalaydi", translation: "... qiladi", example: tenseExamples[i] }));
+
+// DEFAULT MA'LUMOTLAR
+let grammarRules = JSON.parse(localStorage.getItem('grammarRules')) || { A1:[{title:"To be (am/is/are)", content:"I am, You are, He/She/It is, We/You/They are"}], A2:[], B1:[], B2:[], C1:[] };
+let writingTopics = JSON.parse(localStorage.getItem('writingTopics')) || { A1:["Introduce yourself","My family","My daily routine","My favorite food"], A2:["My hobby","Last weekend","My best friend","My plans"], B1:["A memorable experience","Advantages of learning English","My future career"], B2:["Impact of technology","Environmental issues","Online education"], C1:["AI ethics","Climate change solutions","Future of work"] };
+let listeningAudios = JSON.parse(localStorage.getItem('listeningAudios')) || { A1:[{name:"Greeting", text:"Hello, my name is John", url:null},{name:"Introduction", text:"I am from Uzbekistan", url:null}], A2:[{name:"Daily", text:"What time do you wake up?", url:null}], B1:[], B2:[], C1:[] };
+let speakingPhrases = JSON.parse(localStorage.getItem('speakingPhrases')) || { A1:["Hello how are you","My name is","I am fine","Thank you"], A2:["Where do you live","What do you do","I like football"], B1:["Can you recommend a restaurant","I think it is a good idea"], B2:["In my opinion education is key","I completely agree with you"], C1:["From my perspective","I would argue that"] };
+let customTests = JSON.parse(localStorage.getItem('customTests')) || { A1:[], A2:[], B1:[], B2:[], C1:[] };
+
+function getRandomItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+// ASOSIY FUNKSIYALAR
+function showSection(id) {
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('active-section'));
+  document.getElementById(id).classList.add('active-section');
+  if(id==='tenses') displayTenses();
+  if(id==='grammar') displayGrammar();
+  if(id==='settings') { displayAllLists(); updateStorage(); displayCustomTestsList(); }
+  updateStats();
+}
+function showToast(msg) { let t=document.createElement('div'); t.className='toast'; t.innerHTML=`<i class="fas fa-bell"></i> ${msg}`; document.body.appendChild(t); setTimeout(()=>t.remove(),2500); }
+function speakText(t) { if(autoSpeak){ let u=new SpeechSynthesisUtterance(t); u.lang=voiceLang; window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); } }
+function updateStats() {
+  document.getElementById('wordCount').innerHTML=words.length;
+  document.getElementById('testTotal').innerHTML=stats.testsCompleted;
+  document.getElementById('totalScore').innerHTML=stats.totalScore;
+  document.getElementById('ruleCount').innerHTML=Object.values(grammarRules).flat().length;
+  document.getElementById('progressTest').innerHTML=stats.testsCompleted;
+  document.getElementById('progressWriting').innerHTML=stats.writingCompleted;
+  document.getElementById('progressListening').innerHTML=stats.listeningCompleted;
+  document.getElementById('progressSpeaking').innerHTML=stats.speakingCompleted;
+  let total=stats.testsCompleted+stats.writingCompleted+stats.listeningCompleted+stats.speakingCompleted;
+  let percent=Math.min(100,Math.floor((total/200)*100));
+  document.getElementById('overallProgress').style.width=percent+'%';
+  document.getElementById('progressPercent').innerHTML=percent;
+}
+function updateStorage() { try{ document.getElementById('storageSize').innerHTML=Math.round(JSON.stringify(localStorage).length/1024); }catch(e){} }
+function applyFontSize() { document.body.style.fontSize=fontSize+'%'; document.getElementById('fontSizeValue').textContent=fontSize+'%'; document.getElementById('fontSizeControl').value=fontSize; localStorage.setItem('fontSize',fontSize); }
+
+function displayTenses() { let html=''; for(let t of tenses) html+=`<div class="tense-item"><div class="tense-name">${t.id}. ${t.name}</div><div class="tense-uzname">📖 ${t.uzName}</div><div class="tense-info"><div class="tense-box"><strong>📐 Yasalishi:</strong> ${t.formula}</div><div class="tense-box"><strong>📖 Qo'llanilishi:</strong> ${t.usage}</div><div class="tense-box"><strong>🇺🇿 Tarjimasi:</strong> ${t.translation}</div></div><div class="tense-example"><strong>📝 Misol:</strong> ${t.example}</div></div>`; document.getElementById('tensesList').innerHTML=html; }
+
+let currentGrammar='A1';
+function displayGrammar() { let rules=grammarRules[currentGrammar]||[]; let html=`<div style="margin-bottom:15px; display:flex; gap:10px; flex-wrap:wrap;">`; for(let l of ['A1','A2','B1','B2','C1']) html+=`<button onclick="setGrammarLevel('${l}')" class="level-btn ${l} ${currentGrammar===l?'active':''}">${l}</button>`; html+=`</div><div>`; for(let r of rules) html+=`<div class="custom-item"><span><strong>${escapeHtml(r.title)}</strong><br>${escapeHtml(r.content)}</span><button class="delete-btn item-btn" onclick="deleteRule('${currentGrammar}','${escapeHtml(r.title)}')"><i class="fas fa-trash"></i></button></div>`; if(rules.length===0) html+='<p><i class="fas fa-info-circle"></i> Hali qoidalar yo\'q. Sozlamalardan qo\'shing!</p>'; html+=`</div>`; document.getElementById('grammarList').innerHTML=html; }
+function setGrammarLevel(l) { currentGrammar=l; displayGrammar(); }
+function addRule() { let l=document.getElementById('newRuleLevel').value, t=document.getElementById('newRuleTitle').value.trim(), c=document.getElementById('newRuleContent').value.trim(); if(!t||!c){showToast('Iltimos, qoida nomi va matnini kiriting!'); return;} if(!grammarRules[l]) grammarRules[l]=[]; grammarRules[l].push({title:t,content:c}); localStorage.setItem('grammarRules',JSON.stringify(grammarRules)); document.getElementById('newRuleTitle').value=''; document.getElementById('newRuleContent').value=''; if(currentGrammar===l) displayGrammar(); displayAllLists(); showToast('✅ Qoida qo\'shildi!'); }
+function deleteRule(l,t) { if(grammarRules[l]){ grammarRules[l]=grammarRules[l].filter(r=>r.title!==t); localStorage.setItem('grammarRules',JSON.stringify(grammarRules)); if(currentGrammar===l) displayGrammar(); displayAllLists(); showToast('🗑️ O\'chirildi'); } }
+function escapeHtml(str) { return str.replace(/[&<>]/g,function(m){if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+
+// TEST - RANDOM (DARAJALAR ISHLAYDI)
+let testQ=[], testIdx=0, testAns=[], testActive=false;
+let selectedTestLevel = 'A1';
+function generateRandomTest() {
+  let q = [];
+  let levelTests = customTests[selectedTestLevel] || [];
+  for(let test of levelTests) { q.push(test); }
+  let randomWords = [...words].sort(()=>Math.random()-0.5).slice(0,3);
+  for(let w of randomWords){
+    let opts = [w.en, "hello", "good", "big", "small", "nice"].sort(()=>Math.random()-0.5).slice(0,4);
+    q.push({text:`"${w.uz}" so'zining tarjimasi?`, options:opts, correct:w.en});
+  }
+  let grammarQ = [
+    {text:"I ___ to school every day", options:["go","goes","going","went"], correct:"go"},
+    {text:"She ___ playing football now", options:["is","am","are","be"], correct:"is"},
+    {text:"They ___ finished their homework", options:["have","has","is","are"], correct:"have"}
+  ];
+  q.push(...grammarQ.sort(()=>Math.random()-0.5).slice(0,2));
+  return q.sort(()=>Math.random()-0.5).slice(0,8);
+}
+function startTest() { testQ=generateRandomTest(); testIdx=0; testAns=new Array(testQ.length).fill(null); testActive=true; renderTest(); }
+function renderTest() {
+  let area=document.getElementById('testArea');
+  if(!testActive){ area.innerHTML='<button id="startTestBtn" class="start-btn"><i class="fas fa-random"></i> Random Testni Boshlash</button>'; document.getElementById('startTestBtn')?.addEventListener('click',startTest); return; }
+  if(testIdx>=testQ.length){ finishTest(); return; }
+  let q=testQ[testIdx];
+  let html=`<div class="progress"><div class="progress-bar" style="width:${((testIdx+1)/testQ.length)*100}%;"></div></div><div class="question-card"><div class="question-text">${testIdx+1}. ${q.text}</div><div class="options">`;
+  for(let i=0;i<q.options.length;i++) html+=`<div class="option-btn ${testAns[testIdx]===q.options[i]?'selected':''}" data-value="${q.options[i]}"><div class="option-prefix">${String.fromCharCode(65+i)}</div>${q.options[i]}</div>`;
+  html+=`</div></div><div style="display:flex; gap:12px;"><button id="prevBtn" class="start-btn" style="background:#555;" ${testIdx===0?'disabled':''}>◀ Oldingi</button><button id="nextBtn" class="start-btn">${testIdx===testQ.length-1?'✅ Tugatish':'Keyingi ▶'}</button></div>`;
+  area.innerHTML=html;
+  document.querySelectorAll('.option-btn').forEach(b=>{ b.onclick=()=>{ testAns[testIdx]=b.dataset.value; renderTest(); }; });
+  document.getElementById('prevBtn')?.addEventListener('click',()=>{ if(testIdx>0){ testIdx--; renderTest(); } });
+  document.getElementById('nextBtn')?.addEventListener('click',()=>{ if(testIdx<testQ.length-1){ testIdx++; renderTest(); }else{ finishTest(); } });
+}
+function finishTest() { let correct=testAns.filter((a,i)=>a===testQ[i].correct).length; testActive=false; let score=Math.round(correct/testQ.length*100); stats.testsCompleted++; stats.totalScore+=score; localStorage.setItem('englishProStats',JSON.stringify(stats)); updateStats(); document.getElementById('testArea').innerHTML=`<div class="result-box"><div class="result-score">${correct}/${testQ.length}</div><div class="result-percent">${score}%</div><button id="newTestBtn" class="start-btn"><i class="fas fa-random"></i> Yangi Test</button></div>`; document.getElementById('newTestBtn')?.addEventListener('click',startTest); showToast(score>=70?'🎉 Ajoyib!':score>=50?'👍 Yaxshi!':'📚 Davom eting!'); }
+document.getElementById('startTestBtn')?.addEventListener('click',startTest);
+document.querySelectorAll('#testLevelButtons .level-btn').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('#testLevelButtons .level-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedTestLevel = btn.dataset.level;
+    showToast(`📚 Daraja ${selectedTestLevel} ga o'zgartirildi`);
+  };
+});
+document.querySelector('#testLevelButtons .level-btn.A1').classList.add('active');
+
+// TEST QO'SHISH FUNKSIYASI
+function addCustomTest() {
+  let level = document.getElementById('newTestLevel').value;
+  let question = document.getElementById('newTestQuestion').value.trim();
+  let opt1 = document.getElementById('newTestOpt1').value.trim();
+  let opt2 = document.getElementById('newTestOpt2').value.trim();
+  let opt3 = document.getElementById('newTestOpt3').value.trim();
+  let opt4 = document.getElementById('newTestOpt4').value.trim();
+  let correct = document.getElementById('newTestCorrect').value.trim();
+  if(!question || !opt1 || !opt2 || !opt3 || !opt4 || !correct) { showToast('Barcha maydonlarni to\'ldiring!'); return; }
+  if(!customTests[level]) customTests[level] = [];
+  customTests[level].push({ text: question, options: [opt1, opt2, opt3, opt4], correct: correct });
+  localStorage.setItem('customTests', JSON.stringify(customTests));
+  document.getElementById('newTestQuestion').value = '';
+  document.getElementById('newTestOpt1').value = '';
+  document.getElementById('newTestOpt2').value = '';
+  document.getElementById('newTestOpt3').value = '';
+  document.getElementById('newTestOpt4').value = '';
+  document.getElementById('newTestCorrect').value = '';
+  displayCustomTestsList();
+  showToast('✅ Test qo\'shildi!');
+}
+function deleteCustomTest(level, question) {
+  if(customTests[level]) {
+    customTests[level] = customTests[level].filter(t => t.text !== question);
+    localStorage.setItem('customTests', JSON.stringify(customTests));
+    displayCustomTestsList();
+    showToast('🗑️ Test o\'chirildi');
+  }
+}
+function displayCustomTestsList() {
+  let div = document.getElementById('customTestList');
+  if(!div) return;
+  div.innerHTML = '<strong>📝 Siz qo\'shgan testlar:</strong><br>';
+  for(let level in customTests) {
+    for(let test of customTests[level]) {
+      div.innerHTML += `<div class="custom-item"><span>[${level}] ${test.text.substring(0,50)}...</span><button class="delete-btn item-btn" onclick="deleteCustomTest('${level}','${test.text.replace(/'/g, "\\'")}')"><i class="fas fa-trash"></i></button></div>`;
+    }
+  }
+  if(Object.keys(customTests).length === 0) div.innerHTML += '<p>Hali test qo\'shilmagan</p>';
+}
+window.deleteCustomTest = deleteCustomTest;
+
+// WRITING
+let writingLevel='A1';
+function loadWriting() { let topics=writingTopics[writingLevel]||writingTopics.A1; let randomTopic = getRandomItem(topics); document.getElementById('topicText').innerHTML=`✍️ ${randomTopic}<br><span style="font-size:12px;">📊 Daraja: ${writingLevel} | Random mavzu</span>`; document.getElementById('writingInput').value=''; document.getElementById('writingFeedback').innerHTML=''; }
+function checkWriting() { let text=document.getElementById('writingInput').value.trim(); let count=text.length===0?0:text.split(/\s+/).length; let req={A1:10,A2:20,B1:30,B2:40,C1:50}[writingLevel]; let good=count>=req; document.getElementById('writingFeedback').innerHTML=`<div class="feedback ${good?'correct':'incorrect'}"><strong>Natija:</strong><br>📝 So'zlar: ${count} / ${req}<br>${good?'🎉 Ajoyib! Davom eting!':'📚 Ko\'proq yozishingiz kerak!'}</div>`; if(good){ stats.writingCompleted++; stats.totalScore+=10; localStorage.setItem('englishProStats',JSON.stringify(stats)); updateStats(); showToast('✅ Yozishingiz qabul qilindi!'); } }
+function addTopic() { let l=document.getElementById('newTopicLevel').value, t=document.getElementById('newTopicText').value.trim(); if(!t){showToast('Mavzuni kiriting!'); return;} if(!writingTopics[l]) writingTopics[l]=[]; writingTopics[l].push(t); localStorage.setItem('writingTopics',JSON.stringify(writingTopics)); document.getElementById('newTopicText').value=''; if(writingLevel===l) loadWriting(); displayAllLists(); showToast('✅ Mavzu qo\'shildi!'); }
+function deleteTopic(l,t) { if(writingTopics[l]){ writingTopics[l]=writingTopics[l].filter(i=>i!==t); localStorage.setItem('writingTopics',JSON.stringify(writingTopics)); if(writingLevel===l) loadWriting(); displayAllLists(); showToast('🗑️ Mavzu o\'chirildi'); } }
+document.getElementById('checkWritingBtn')?.addEventListener('click',checkWriting);
+document.getElementById('nextWritingBtn')?.addEventListener('click',()=>{ loadWriting(); showToast('🎲 Yangi random mavzu!'); });
+document.getElementById('addTopicBtn')?.addEventListener('click',addTopic);
+
+// LISTENING
+let listeningLevel='A1', currentAudio=null;
+function loadListening() { let audios=listeningAudios[listeningLevel]||[]; if(audios.length===0){ document.getElementById('listenPhrase').innerHTML='⚠️ Audio yo\'q. Sozlamalardan qo\'shing!'; return; } currentAudio = getRandomItem(audios); document.getElementById('listenPhrase').innerHTML=`🎧 Daraja: ${listeningLevel}<br>🎵 ${currentAudio.name}<br>📝 "${currentAudio.text}"`; document.getElementById('listeningAnswer').value=''; document.getElementById('listeningFeedback').innerHTML=''; }
+function playAudio() { if(currentAudio&&currentAudio.url){ new Audio(currentAudio.url).play(); }else{ speakText(currentAudio.text); } }
+function checkListening() { let ans=document.getElementById('listeningAnswer').value.toLowerCase().trim(); let correct=currentAudio.text.toLowerCase(); let isCorrect=ans.includes(correct)||correct.includes(ans); document.getElementById('listeningFeedback').innerHTML=`<div class="feedback ${isCorrect?'correct':'incorrect'}"><strong>Natija:</strong><br>📝 Siz: "${ans||'(bo\'sh)'}"<br>✅ To\'g\'ri: "${currentAudio.text}"<br>${isCorrect?'🎉 To\'g\'ri!':'❌ Noto\'g\'ri!'}</div>`; if(isCorrect){ stats.listeningCompleted++; stats.totalScore+=10; localStorage.setItem('englishProStats',JSON.stringify(stats)); updateStats(); showToast('✅ To\'g\'ri javob!'); } }
+function addAudio() { let l=document.getElementById('newAudioLevel').value, n=document.getElementById('newAudioName').value.trim(), t=document.getElementById('newAudioText').value.trim(), f=document.getElementById('newAudioFile').files[0]; if(!n||!t){showToast('Audio nomi va matnini kiriting!'); return;} if(!listeningAudios[l]) listeningAudios[l]=[]; let url=f?URL.createObjectURL(f):null; listeningAudios[l].push({name:n,text:t,url}); localStorage.setItem('listeningAudios',JSON.stringify(listeningAudios)); document.getElementById('newAudioName').value=''; document.getElementById('newAudioText').value=''; document.getElementById('newAudioFile').value=''; if(listeningLevel===l) loadListening(); displayAllLists(); showToast('✅ Audio qo\'shildi!'); }
+function deleteAudio(l,n) { if(listeningAudios[l]){ listeningAudios[l]=listeningAudios[l].filter(a=>a.name!==n); localStorage.setItem('listeningAudios',JSON.stringify(listeningAudios)); if(listeningLevel===l) loadListening(); displayAllLists(); showToast('🗑️ Audio o\'chirildi'); } }
+document.getElementById('playAudioBtn')?.addEventListener('click',playAudio);
+document.getElementById('checkListeningBtn')?.addEventListener('click',checkListening);
+document.getElementById('nextListeningBtn')?.addEventListener('click',()=>{ loadListening(); showToast('🎲 Yangi random ibora!'); });
+document.getElementById('addAudioBtn')?.addEventListener('click',addAudio);
+
+// SPEAKING
+let speakingLevel='A1', currentPhrase='';
+let recognition=null;
+function loadSpeaking() { let phrases=speakingPhrases[speakingLevel]||[]; if(phrases.length===0){ document.getElementById('speakPhrase').innerHTML='⚠️ Ibora yo\'q. Sozlamalardan qo\'shing!'; return; } currentPhrase = getRandomItem(phrases); document.getElementById('speakPhrase').innerHTML=`🎙️ Daraja: ${speakingLevel}<br>👇 "${currentPhrase}"`; document.getElementById('speakingFeedback').innerHTML=''; document.getElementById('recordStatus').innerHTML=''; }
+function speakExample() { speakText(currentPhrase); }
+function initSpeech() {
+  if(!('webkitSpeechRecognition' in window)){ showToast('Chrome brauzeridan foydalaning!'); return false; }
+  const SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+  recognition=new SpeechRecognition();
+  recognition.lang='en-US';
+  recognition.onstart=()=>{ document.getElementById('recordStatus').innerHTML='🔴 Ayting...'; document.getElementById('startRecordBtn').style.background='#ff4444'; };
+  recognition.onresult=(e)=>{
+    let spoken=e.results[0][0].transcript.toLowerCase().trim();
+    let correct=currentPhrase.toLowerCase();
+    let isCorrect=spoken.includes(correct)||correct.includes(spoken)||spoken.split(' ').filter(w=>correct.includes(w)).length>=2;
+    document.getElementById('recordStatus').innerHTML=`📝 Siz: "${spoken}"`;
+    document.getElementById('speakingFeedback').innerHTML=`<div class="feedback ${isCorrect?'correct':'incorrect'}">🎯 "${currentPhrase}"<br>🎤 "${spoken}"<br>${isCorrect?'🎉 To\'g\'ri! Ajoyib!':'❌ Noto\'g\'ri. Qayta urining!'}</div>`;
+    if(isCorrect){ stats.speakingCompleted++; stats.totalScore+=10; localStorage.setItem('englishProStats',JSON.stringify(stats)); updateStats(); showToast('✅ To\'g\'ri talaffuz!'); }
+    setTimeout(()=>recognition.stop(),500);
+  };
+  recognition.onerror=()=>{ document.getElementById('recordStatus').innerHTML='❌ Xatolik'; document.getElementById('startRecordBtn').style.background='var(--primary)'; };
+  recognition.onend=()=>{ document.getElementById('startRecordBtn').style.background='var(--primary)'; document.getElementById('startRecordBtn').innerHTML='🎙️ Gapirishni boshlash'; };
+  return true;
+}
+function startRecognition() { if(!recognition&&!initSpeech()) return; try{ recognition.start(); document.getElementById('startRecordBtn').innerHTML='🔴 Gapiryapti...'; }catch(e){ showToast('Mikrofon ruxsatini tekshiring'); } }
+function addSpeak() { let l=document.getElementById('newSpeakLevel').value, p=document.getElementById('newSpeakText').value.trim(); if(!p){showToast('Iborani kiriting!'); return;} if(!speakingPhrases[l]) speakingPhrases[l]=[]; speakingPhrases[l].push(p); localStorage.setItem('speakingPhrases',JSON.stringify(speakingPhrases)); document.getElementById('newSpeakText').value=''; if(speakingLevel===l) loadSpeaking(); displayAllLists(); showToast('✅ Ibora qo\'shildi!'); }
+function deleteSpeak(l,p) { if(speakingPhrases[l]){ speakingPhrases[l]=speakingPhrases[l].filter(i=>i!==p); localStorage.setItem('speakingPhrases',JSON.stringify(speakingPhrases)); if(speakingLevel===l) loadSpeaking(); displayAllLists(); showToast('🗑️ Ibora o\'chirildi'); } }
+document.getElementById('speakExampleBtn')?.addEventListener('click',speakExample);
+document.getElementById('startRecordBtn')?.addEventListener('click',startRecognition);
+document.getElementById('nextSpeakBtn')?.addEventListener('click',()=>{ loadSpeaking(); showToast('🎲 Yangi random ibora!'); });
+document.getElementById('addSpeakBtn')?.addEventListener('click',addSpeak);
+
+// QO'SHIMCHA RO'YXATLAR
+function displayAllLists() {
+  let tDiv=document.getElementById('customTopicsList'); if(tDiv){ tDiv.innerHTML='<strong>📝 Mavzular:</strong><br>'; for(let l in writingTopics) writingTopics[l].forEach(t=>{ tDiv.innerHTML+=`<div class="custom-item"><span>[${l}] ${escapeHtml(t)}</span><button class="delete-btn item-btn" onclick="deleteTopic('${l}','${escapeHtml(t)}')"><i class="fas fa-trash"></i></button></div>`; }); if(Object.keys(writingTopics).length===0) tDiv.innerHTML+='<p>Hali mavzu yo\'q</p>'; }
+  let aDiv=document.getElementById('customAudioList'); if(aDiv){ aDiv.innerHTML='<strong>🎵 Audiolar:</strong><br>'; for(let l in listeningAudios) listeningAudios[l].forEach(a=>{ aDiv.innerHTML+=`<div class="custom-item"><span>[${l}] ${escapeHtml(a.name)}<br><small>${escapeHtml(a.text)}</small></span><div class="item-buttons">${a.url?`<button class="play-btn item-btn" onclick="new Audio('${a.url}').play()">🔊</button>`:''}<button class="delete-btn item-btn" onclick="deleteAudio('${l}','${escapeHtml(a.name)}')"><i class="fas fa-trash"></i></button></div></div>`; }); if(Object.keys(listeningAudios).length===0) aDiv.innerHTML+='<p>Hali audio yo\'q</p>'; }
+  let sDiv=document.getElementById('customSpeakList'); if(sDiv){ sDiv.innerHTML='<strong>🎙️ Iboralar:</strong><br>'; for(let l in speakingPhrases) speakingPhrases[l].forEach(p=>{ sDiv.innerHTML+=`<div class="custom-item"><span>[${l}] ${escapeHtml(p)}</span><button class="delete-btn item-btn" onclick="deleteSpeak('${l}','${escapeHtml(p)}')"><i class="fas fa-trash"></i></button></div>`; }); if(Object.keys(speakingPhrases).length===0) sDiv.innerHTML+='<p>Hali ibora yo\'q</p>'; }
+  let rDiv=document.getElementById('customRuleList'); if(rDiv){ rDiv.innerHTML='<strong>📘 Qoidalar:</strong><br>'; for(let l in grammarRules) grammarRules[l].forEach(r=>{ rDiv.innerHTML+=`<div class="custom-item"><span>[${l}] <strong>${escapeHtml(r.title)}</strong><br>${escapeHtml(r.content)}</span><button class="delete-btn item-btn" onclick="deleteRule('${l}','${escapeHtml(r.title)}')"><i class="fas fa-trash"></i></button></div>`; }); if(Object.keys(grammarRules).length===0) rDiv.innerHTML+='<p>Hali qoida yo\'q</p>'; }
+}
+window.deleteTopic=deleteTopic; window.deleteSpeak=deleteSpeak; window.deleteAudio=deleteAudio; window.deleteRule=deleteRule;
+
+// DARAJA TUGMALARI
+function setupLevel(l,cb){ document.querySelectorAll(`${l} .level-btn`).forEach(b=>{ b.onclick=()=>{ document.querySelectorAll(`${l} .level-btn`).forEach(a=>a.classList.remove('active')); b.classList.add('active'); cb(b.dataset.level); }; }); }
+setupLevel('#writingLevelButtons',l=>{writingLevel=l; loadWriting();});
+setupLevel('#listeningLevelButtons',l=>{listeningLevel=l; loadListening();});
+setupLevel('#speakingLevelButtons',l=>{speakingLevel=l; loadSpeaking();});
+setupLevel('#grammarLevelButtons',l=>{setGrammarLevel(l);});
+document.querySelector('#writingLevelButtons .level-btn.A1')?.classList.add('active');
+document.querySelector('#listeningLevelButtons .level-btn.A1')?.classList.add('active');
+document.querySelector('#speakingLevelButtons .level-btn.A1')?.classList.add('active');
+
+// SOZLAMALAR FUNKSIYALARI
+document.getElementById('autoSpeak').checked=true;
+document.getElementById('autoSpeak').onchange=e=>{autoSpeak=e.target.checked; localStorage.setItem('autoSpeak',autoSpeak);};
+document.getElementById('showTranslation').checked=true;
+document.getElementById('showTranslation').onchange=e=>{showTranslation=e.target.checked; localStorage.setItem('showTranslation',showTranslation);};
+document.getElementById('voiceLang').value='en-US';
+document.getElementById('voiceLang').onchange=e=>{voiceLang=e.target.value; localStorage.setItem('voiceLang',voiceLang); if(recognition) recognition.lang=voiceLang;};
+document.getElementById('fontSizeControl').oninput=e=>{fontSize=parseInt(e.target.value); applyFontSize();};
+document.getElementById('resetBgBtn').onclick=()=>{document.querySelector('.bg').style.background=''; document.querySelector('.bg').style.background='linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #1a2a4a 100%)'; showToast('Fon tiklandi');};
+document.getElementById('bgInput').onchange=e=>{if(e.target.files[0]){ let url=URL.createObjectURL(e.target.files[0]); document.querySelector('.bg').style.background=`url(${url}) center/cover no-repeat`; showToast('Fon o\'zgartirildi'); }};
+document.getElementById('addWordBtn').onclick=()=>{ let uz=document.getElementById('newWordUz').value.trim(); let en=document.getElementById('newWordEn').value.trim(); if(uz&&en){ words.push({uz,en}); updateStats(); document.getElementById('newWordUz').value=''; document.getElementById('newWordEn').value=''; showToast(`✅ "${uz} → ${en}" qo'shildi!`); } else showToast('Ikkala maydonni to\'ldiring!'); };
+document.getElementById('searchInput').addEventListener('input',function(e){
+  let val=e.target.value.toLowerCase().trim(); let res=document.getElementById('results'); res.innerHTML=''; if(!val) return;
+  let matches=words.filter(w=>w.uz.includes(val)||w.en.includes(val));
+  for(let w of matches){ let d=document.createElement('div'); d.className='result-item'; d.innerHTML=showTranslation?`📖 ${w.uz} → ${w.en}`:`📖 ${w.en}`; d.onclick=()=>speakText(w.en); res.appendChild(d); }
+});
+document.getElementById('fullscreenBtn').onclick=()=>{ if(!document.fullscreenElement){ document.documentElement.requestFullscreen(); }else{ document.exitFullscreen(); } };
+document.getElementById('exportDataBtn').onclick=()=>{ let data={words,grammarRules,writingTopics,listeningAudios,speakingPhrases,stats,customTests}; let blob=new Blob([JSON.stringify(data)],{type:'application/json'}); let a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=`english_pro_backup.json`; a.click(); showToast('💾 Eksport qilindi'); };
+document.getElementById('importDataBtn').onclick=()=>{ let inp=document.createElement('input'); inp.type='file'; inp.accept='.json'; inp.onchange=e=>{ let file=e.target.files[0]; let reader=new FileReader(); reader.onload=ev=>{ try{ let data=JSON.parse(ev.target.result); if(data.words) words=data.words; if(data.grammarRules) grammarRules=data.grammarRules; if(data.writingTopics) writingTopics=data.writingTopics; if(data.listeningAudios) listeningAudios=data.listeningAudios; if(data.speakingPhrases) speakingPhrases=data.speakingPhrases; if(data.stats) stats=data.stats; if(data.customTests) customTests=data.customTests; localStorage.setItem('englishProStats',JSON.stringify(stats)); updateStats(); displayAllLists(); displayCustomTestsList(); showToast('📥 Import qilindi!'); setTimeout(()=>location.reload(),1000); }catch(e){showToast('❌ Xato!');} }; reader.readAsText(file); }; inp.click(); };
+document.getElementById('resetAllBtn').onclick=()=>{ if(confirm('Hammasini tiklash?')){ localStorage.clear(); location.reload(); } };
+document.getElementById('clearCacheBtn').onclick=()=>{ showToast('Kesh tozalandi!'); setTimeout(()=>location.reload(),500); };
+document.getElementById('clearStorageBtn').onclick=()=>{ if(confirm('Barcha ma\'lumotlar o\'chiriladi?')){ localStorage.clear(); location.reload(); } };
+document.getElementById('clearStatsBtn').onclick=()=>{ if(confirm('Statistika tozalanadi?')){ stats={testsCompleted:0,writingCompleted:0,listeningCompleted:0,speakingCompleted:0,totalScore:0}; localStorage.setItem('englishProStats',JSON.stringify(stats)); updateStats(); showToast('Statistika tozalandi'); } };
+document.getElementById('addRuleBtn')?.addEventListener('click',addRule);
+document.getElementById('addTestBtn')?.addEventListener('click',addCustomTest);
+
+// THEME
+function initTheme(){ let saved=localStorage.getItem('theme'); if(saved==='light') document.body.classList.add('light'); updateThemeBtn(); }
+function updateThemeBtn(){ let isLight=document.body.classList.contains('light'); document.getElementById('themeToggleBtn').innerHTML=isLight?'<i class="fas fa-moon"></i> Qorong\'u rejim':'<i class="fas fa-sun"></i> Yorug\' rejim'; }
+function toggleTheme(){ document.body.classList.toggle('light'); localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark'); updateThemeBtn(); showToast(document.body.classList.contains('light')?'☀️ Yorug\' rejim':'🌙 Qorong\'u rejim'); }
+document.getElementById('themeToggleBtn').onclick=toggleTheme;
+
+// BOSHLASH
+applyFontSize(); initTheme(); updateStats(); displayTenses(); displayGrammar(); loadWriting(); loadListening(); loadSpeaking(); displayAllLists(); displayCustomTestsList(); updateStorage(); initSpeech();
+console.log('✨ ENGLISH PRO X ULTIMATE v14.0 ishga tushdi! ✨');
+console.log('🎯 Random testlar | 27 zamon | A1-C1 | Darajalar ishlaydi');
+</script>
+</body>
+</html>
